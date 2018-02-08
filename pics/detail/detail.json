@@ -1,0 +1,164 @@
+{
+
+  "detail":[
+
+    {
+      "Name": "LIGHTSCAPE CITIES",
+      "About": "Architectural Illustration competition. The project attempts to reflect cities from the future which are able to connect people and transmit matter through light.",
+      "Execution": ["Design Process","Visualization"],
+      "Programs Used": ["Rhino 3D Modelling","Cinema 4D","Octane Renderer","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
+
+    },{
+      "Name": "ILLUMINATION TESTS  Hush Studios",
+      "About": "Illumination test experiments made in Hush Studios.",
+      "Execution": ["Design Process","Visualization"],
+      "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.gif","1.jpg","2.jpg","3.gif","4.jpg","5.jpg","6.gif","7.jpg","8.jpg"]
+
+    },{
+      "Name": "PROJECT S. Hush Studios",
+      "About": "Showroom display for electronics, US.",
+      "Location": "USA",
+      "Execution": ["Visualization"],
+      "Programs Used": ["Rhino 3D Modelling","Octane Renderer","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg"]
+
+    },{
+      "Name": "PROJECT T. Hush Studios",
+      "About": "Art Basel Miami competition for designing an installation for an artistic music concert experience.",
+      "Location": "Florida USA",
+      "Execution": ["Visualization"],
+      "Programs Used": ["Photoshop CC"],
+      "Year": 17,
+      "Files":["0.jpg"]
+
+    },{
+      "Name": "SYNERGIA AADRL",
+      "About": "The Master Thesis of the AADRL program consists in merging architecture and robotics. Based on the recent revolutionised fields of robotics research (Hod Lipson) which studies soft multi-material freeform fabrication technologies as a new development for locomotion, we exploit this new paradigm as a close relationship between architecture and machines that has the capacity to fabricate optimised tools that could serve as a technological system proposal in order to use them as kinetic spaces.",
+      "Location": "London UK",
+      "Execution": ["Design Process","Animation"],
+      "Programs Used": ["Maya 3D","Processing","Arduino","Vray","Photoshop CC"],
+      "Year": 16,
+      "Files":["0.mp4","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.mp4","8.mp4","9.mp4","10.mp4","11.jpg","12.jpg","13.jpg","14.mp4","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.mp4","22.mp4"],
+      "Detail": [
+        "Synergia proposes a new model of behavioural assembly systems as a generating force for architecture form (John Frazer). Based on the recent revolutionised fields of robotics research (Hod Lipson) which studies the soft multi-material freeform fabrication technologies as a new development for locomotion, we exploit this new paradigm as a close relationship between architecture and machines that has the capacity to fabricate optimised tools that could serve as a technological system proposal aiming to idealise into an emerging model for innovative modern spaces for society.",
+        "The reproduction of multi-programmable matter into the frame of generative soft systems enable us to speculate a flexible evolutionary design algorithm for 3D multi-material structures which by the encoding of an compositional - pattern - producing - network (CPPN), we can control complex material deformations in order to achieve new forms of spatial assemblies.  In order construct this principle, we focused on digital simulation studies based on a grid information system where the cubic form enable us to perform the trajectory freedom of understanding multi directional networks of reproduction. Constructed by the controlled system of a universal unit formed by a 3 by 3, 27 voxel organism, where each voxel posses the multi materiality condition with the capacity to direct graduated strategies of actuation in a expanded, contracted, rigid or neutral combination of states, give us the possibility to attempt a dynamic system that can respond to changes through self-awareness, mobility and softness where every unit could reconfigure themselves in order to transform into a determined structure.",
+        "Our project research exploits the potential to speculate a system which is adaptive and has the ability to generate itself  through communication within a certain environment. This system was explored by the definition of certain kind of entities which posses a chain of interlocked interactions where they start acting under the inception set of rules that they need to reach and distribute themselves in space. We propose a new architecture typology that offer the self organisation intelligence of certain types of internal unit actuations, that has the potential to form or deform evolutionary systems of infrastructures as a new tool of applications into the physical and designing world of space making architecture",
+        "The units are formed by a 3 by 3, 27 voxel organism, where each voxel posses the multi materiality condition with the capacity to direct graduated strategies of actuation in a expanded, contracted, rigid or neutral combination of states, that give us the possibility to attempt a dynamic system that can respond to changes through self-awareness, mobility and softness where every unit could reconfigure themselves in order to transform into a determined structure"
+      ]
+    },{
+      "Name": "RENATO POBLETE PARK Ministry Public Buildings",
+      "About": "Chilean Government Project which was selected through a competition organized by the Ministry of Public Buildings in 2013. The winner of the project was the firm Cristian Boza Architects. During the process of construction, the Ministry had to inspect and approve construction phases according to the architects design.",
+      "Location": "Santiago Chile",
+      "Execution": ["Construction","Inspector"],
+      "Year": 14,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg"],
+      "Detail": [
+        "The River-Park Renato Poblete is inserted into a master plan that aims to convert the Mapocho River, as new green areas for Santiago city.The Mapocho river has long been considered the backyard of the capital. Therefore, this project, designed by the Office Cristián Boza Architects, proposes the first urban river park of Chile where they can make light water sports and also connect it to one of the main cycling roads in the city.",
+        "The 20 hectare park located in Quinta Normal, on the west side of the Park of the so called Kings, are divided into two sectors: the “Arm River Park” and “Paseo El Cauce”. The first, covers an area of 13 hectares which is a lagoon for water sports, and the second area of the park, “El Paseo Cauce” is a flood able ride that makes up the stretch of 7 hectares. The park also includes an amphitheater, two tennis synthetic grass, water features and playgrounds."
+      ]
+    },{
+      "Name": "SAN GINES THEATER Ministry Public Buildings",
+      "About": "Chilean Government Project which was selected through a competition organized by the Ministry of Public Buildings in 2011. Afterwards, in 2014 the project received the fundings in order to be built. The winner of the project was the firm Cristian Boza Architects. During the process of construction, the Ministry had to inspect and approve construction phases according to the architects design.",
+      "Location": "Santiago Chile",
+      "Execution": ["Design Process","Model Building","Visualization "],
+      "Year": 14,
+      "Files":["0.jpg","1.jpg"]
+
+    },{
+      "Name": "JESUIT MISSION OF TIRUA Undergraduate Thesis",
+      "About": "As humanity advances according to the phenomenon of universalisation, we come up to discard our cultural past. Reminding the attention from Paul Ricoeur by asking; How to become modern and return to the sources, how to revive an old and dormant civilisation and take part in the universal civilisation? The intent of this project is to rescue a previous element of our historical past that has been prevailing institutionally in the Chilean idiosyncrasy, which is the Jesuit Mission. From this premise, it is proposed a Jesuit mission as a design practice, articulator place for an historical present for the reunion and meeting space of an ancient religious order [Jesuits of Chile] and our old present forgotten [Mapuche] civilisation. Realizing so, it was taken the Jesuit-indigenous spatial layout for actual architecture program. The Jesuit mission intends to create an architecture that lives between two worlds and be a unifying impact on the Chilean territory of Tirúa; one of the poorest and most troubled indigenous communities concentrated in the country. A work experience with a representative material reflecting with the indigenous world [Wood] and their spiritual connection to the land [plane-horizontal concept of spirituality] versus the western world  [Concrete] in a particular and spiritual connection with God in heaven [plane-vertical spirituality], as well as in his programmatic function into linear progress of peregrination... the [living in the east] to the [perish of the west into Mocha island], being assembled in a central square as neutral meeting place.",
+      "Location": "Tirua/ Region del Bio Bio/ Chile",
+      "Execution": ["Design Process","Model Building","Visualization "],
+      "Year": 11,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg"]
+
+    },{
+      "Name": "CARMELITAS MONASTERY AIRA Cazu Zegers",
+      "About": "The Carmelitas Monastery is a project that was requested by the convent nuns of the Carmelitas society in Cajon del Maipo, Chile. The project was inspired by a sylvester flower that grows in the those fields, resembling the idea of sensitivity and delicate power of nature as a symbol to remember Gods force. It consist in placing a Chapel in the centre of the terrain as the main flower core where the rest of the infrastructure is connected in a spiral path to the nuns private cells, imagined as big petals.",
+      "Location": "Cajon del Maipo/ Chile",
+      "Execution": ["Design Process","Model Building","Visualization "],
+      "Year": "08",
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg"]
+
+    },
+    {
+      "Name": "GLOBE ACTIVATION Hush Studios",
+      "About": "Interactive installation situated in Silicon Valley where users can visualize in a creative way the data and information from the company from multi touch screens. The construction materials are wood ribs with waterjet cut steel supports.",
+      "Execution": ["Design Process","Visualization","Model Building"],
+      "Location": "Silicon Valley California USA",
+      "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.gif","10.mp4","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.mp4","19.jpg","20.jpg"]
+
+    },{
+      "Name": "PROJECT L.  Hush Studios",
+      "About": "Office installation situated in California where users can interact through a centered high touch controller who displays the company’s information. Consequently they can search the data in an artistic personal experience.",
+      "Location": "California USA",
+      "Execution": ["Visualization"],
+      "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"]
+
+    },{
+      "Name": "PROJECT VOLO  Hush Studios",
+      "About": "Augmented Reality Game (available in appstore) where people is able to play by drawing and sending “wishes” into a sculpture well. The project consists of two scale wells. The first one was made in a larger dimension for being exhibited in an art gallery. And the second one in a small scale version where people can play it on a desk.",
+      "Location": "NY USA",
+      "Execution": ["Design Process","Visualization","Sculpture Making"],
+      "Programs Used": ["Rhino 3D Modelling","After Effects","Octane Renderer","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.mp4","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"]
+
+    },{
+      "Name": "EMOTIVE CITY Minimaforms",
+      "About": "Minimaforms was invited to exhibit in Future Fest 2015. The project consists of a main sphere cluster model that interacts with surrounding sphere-bots moving randomly on a platform. The moment when people interact with the sphere-bots, signals are sent to a top data that returns the signal into the main cluster model, making it to change its light patterns.",
+      "Location": "London UK",
+      "Execution": ["Spherebot /Installation"],
+      "Programs Used": ["Rhino 3D Modelling","Arduino"],
+      "Year": 16,
+      "Files":["0.jpg","1.jpg","3.jpg","4.jpg","5.mp4"],
+      "Detail":["The exhibition from Minimaforms called «Emotive City», is a paskian construction performed for «FutureFest», a festival organized by Nesta in Vinopolis 2015. This project was designed by Stephen Spyropoulos and Theodore Spyropoulos. It is an installation that consists of a main structure, positioned in the center of a stationary ground, where it is controlled and regulated according to the situation of a number of semi-autonomous sphere-bots. The sphere-bots are wandering around the main structure and interacts between themselves and with the visitors who are able to affect and contribute to the whole system. Each sphere-bot contains a signal device that according to the behavior and his variable set of emotions that he is experiencing, sends a particular message through a wire-less digital camera that is hanged in the upper part of the installation. The camera who is constantly detecting and capturing each emotion from the sphere-bots, returns the «emotive signal» into the main center structure, where from there, affects the aesthetic representation of the model. The representation turns into an «animated strategy» and beautiful composition of colors [white, yellow, red, blue] that somehow evoke a new kind of regulation within the whole system."]
+
+    },{
+      "Name": "ENCODED MATTER AADRL",
+      "About": "Workshop practiced during the AADRL Masters which consisted in using a processing agent behavior into the mill tool of a CNC machine in order to analyse and experiment new design patterns.",
+      "Location": "London UK",
+      "Execution": ["Design Process","Model Building"],
+      "Programs Used": ["CNC Milling","Arduino","Processing"],
+      "Year": 15,
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg"],
+      "Detail": ["This workshop consisted in experimenting with the output result between computational systems [Processing simulations] and a CNC milling machine with localised sensors in a real time feedback stimulation. All this in order to find new design techniques as a speculative process of  experimenting with a real feedback loop between the virtual world and the physical world. Through the process of playing with the different set of variables of an abstract agent running in the program, which was connected to the milling machine, it starts to emulate the same behaviours from the program. Afterwards, it receive additional data from sensors added to the milling tool which attempt against the variables stated from the program, giving as consequence an unpredicted shape that can compromise depth, hight or direction of the current tool. "]
+
+    },{
+      "Name": "MONEDA BICENTENARIO BUILDING Ministry Public Buildings",
+      "About": "The building Moneda Bicentario is a project designed by the Office Teodoro Fernández, which provides the new allocation for the Ministry of Internal Affairs of the Chilean Government in Santiago de Chile. It is currently located in the corner of Teatinos and Moneda Street, where over 3,000 square meters approximately (19 levels in total) has been build. It includes a heliport, a large Auditorium, cafeteria and ventilated interior squares.",
+      "Location": "Santiago Chile",
+      "Execution": ["Construction ","Inspector "],
+      "Year": 14,
+      "Files":["0.jpg","1.jpg","2.jpg"]
+
+    },{
+      "Name": "PH HOUSE Rafael Iglesia Studio",
+      "About": "The project consist in a private building of 4 levels [including the ground floor] designed for housing . Each floor proposes two studio apartments of 40m2. The problematic idea was how to gain more space due to the small terrain that the client possessed. Therefore, the stairs, instead of being hidden like most of the normal buildings. It was proposed to become the main facade.",
+      "Location": "Rosario Argentina",
+      "Execution": ["Design Process","Model Building","Visualization "],
+      "Year": "09",
+      "Files":["0.jpg","1.jpg"]
+
+    },{
+      "Name": "MILITARY NEIGHBORHOOD BUILDING",
+      "About": "The project is proposed in the new military terrain acquisition close to the “Presidente Riesco” Avenue and “Vespucio” Avenue in Santiago de Chile. This terrain was chosen by the military army forces to build new housing buildings for the military and their families due to his near location to the main Military School. The building was supposed to fit different types of apartments, specifically some of 50m2, 80m2 and 120m2. The project introduces the idea of two separate facades, that respond according to the strong and weak sun lights of the day in that particular area. The one who  faces the east side is completely covered by thick glass, while the other facade confronts the west side where the light is quite strong after 4pm. Therefore, that front plays with thick balconies that smooths the sunbeams into the specific apartments",
+      "Location": "Cajon del Maipo/ Chile",
+      "Execution": ["Design Process","Model Building","Visualization"],
+      "Year": "08",
+      "Files":["0.jpg","1.jpg"]
+
+    }
+
+  ]
+
+}

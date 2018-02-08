@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AvMS</title>
+    <link rel="stylesheet" href="avm.css">
+    <style>
+
+        body{
+
+            overflow: hidden;
+            background-color: black;
+
+        }
+    </style>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="load"> <img src="pics/load/0.gif" class="loadImg"></div>
+<div id="menu" class="white">
+
+    <div class="menu" id="work">Work <div class="selectLine"></div></div>  /
+    <div class="menu" id="about">About <div class="selectLine"></div></div>  /
+    <div class="menu" id="contact">Résumé <div class="selectLine"></div></div>  /
+
+
+</div>
+
+
+<div id="background"><div class="bg-overlay"></div></div>
+
+<div class="titleContainer">
+    <div class="rotateContainer">
+        <img id="cube" class="titleCube" src="pics/Cube0.png">
+        <div class="inline white titleText">Astrid von Mühlenbrock<div class="selectLine"></div></div>
+    </div>
+
+</div>
+
+<script>
+
+
+
+    //append images
+    var background =  $('#background');
+    var imgs = [];
+    var scales = [];
+
+
+
+    for(var i=0; i<=8;i++){
+
+
+        background.append('<div id="background_'+i+'" class="background"></div>');
+        imgs.push($('#background_'+i));
+
+        imgs[i].css({
+            "background": "url('pics/"+i+".jpg') no-repeat",
+            "background-size": "100%"
+        });
+
+        if(i ==4 || i==5)
+            imgs[i].css({
+                "height":"200%",
+                "top":"-60%",
+                "background": "url('pics/"+i+".gif') no-repeat center center",
+                "background-size": "100%"
+            });
+
+
+        if(i==7){
+
+            imgs[i].append('<video id="video0" width="100%" style="z-index: -100;"> <source src="pics/7.mp4" type="video/mp4"> </video>');
+
+        }
+
+        if(i==8){
+
+            imgs[i].append('<video id="video1" width="100%" style="z-index: -100;"> <source src="pics/8.mp4" type="video/mp4"> </video>');
+
+        }
+
+        scales.push(1);
+
+        if(i) imgs[i].hide();
+
+    }
+
+
+
+
+
+    var currentPic =0;
+    var scaleSpeed = 0.0002;
+
+    function scaleAndFade(el,time) {
+
+        var opacity = 1;
+
+        var SAF = setInterval(function () {
+
+            opacity-=1/time;
+
+            el.css({'opacity': opacity});
+
+
+            if (opacity <=0) {
+
+                el.hide();
+                clearInterval(SAF);
+
+            }
+
+        },20)
+
+    }
+
+
+
+    setInterval(function () {
+
+        scales.forEach(function (s,n) {
+
+            scales[n] += scaleSpeed
+
+        });
+
+        imgs.forEach(function (img,n) {
+
+
+
+            img.css({transform: "scale("+(scales[n])+")"});
+
+        });
+
+
+
+        if(scales[currentPic]>=1.05) {
+
+
+            scaleAndFade(imgs[currentPic],100);
+
+            imgs[currentPic].css({'z-index':-99});
+
+            currentPic++;
+            if(currentPic >= imgs.length) currentPic=0;
+            scales[currentPic] = 1;
+            imgs[currentPic].show();
+            imgs[currentPic].css({'z-index':-100,'opacity':1});
+
+            if(currentPic ==7) {
+
+                $('#video0').get(0).play();
+                scaleSpeed = 0.0001
+
+            }else if(currentPic ==8) {
+
+                $('#video1').get(0).play();
+                scaleSpeed = 0.0001
+
+            }else scaleSpeed = 0.0002;
+
+
+
+        }
+
+    },20);
+
+
+
+</script>
+<script src="menu.js"></script>
+</body>
+</html>

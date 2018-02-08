@@ -1,0 +1,77 @@
+{
+
+  "works":[
+    {
+      "title":"LIGHTSCAPE CITIES",
+      "info":"personal project.",
+      "description":"Architectural illustration competition."
+    },{
+      "title":"ILLUMINATION TESTS",
+      "info":"for Hush Studios.",
+      "description":"Interactive array of lights installation situated in Silicone Valley, US."
+    },{
+      "title":"PROJECT S",
+      "info":"for Hush Studios.",
+      "description":"Showroom display for electronics, US."
+    },{
+      "title":"PROJECT T",
+      "info":" for Hush Studios.",
+      "description":"Music-Art Installation competition, Florida, US."
+    },{
+      "title":"SYNERGIA",
+      "info":"AADRL Master Thesis Project.",
+      "description":"Introducing Soft-multi material free form fabrication robotics into architecture."
+    },{
+      "title":"RENATO POBLETE PARK",
+      "info":"for Ministry of Public Buildings.",
+      "description":"Cristian Boza project under construction supervision from the Chilean government. "
+    },{
+      "title":"SAN GINES THEATER",
+      "info":"for Ministry of Public Buildings.",
+      "description":"Cristian Boza project under construction supervision from the Chilean government."
+    },{
+      "title":"JESUIT MISSION",
+      "info":"Undergraduate Thesis Project.",
+      "description":"Designing a jesuit mission with a new cultural program in Tirua, Chile."
+    },{
+      "title":"CARMELITAS MONASTERY",
+      "info":"for AIRA Cazu Zegers.",
+      "description":"Designing a monastery for convent nuns Carmelitas in Cajon del Maipo, Chile."
+    },{
+      "title":"GLOBE ACTIVATION",
+      "info":"for Hush Studios.",
+      "description":"Interactive installation situated in Silicone Valley, US."
+    },{
+      "title":"PROJECT L",
+      "info":"for Hush Studios.",
+      "description":"Projection mapping installation showroom situated in NY"
+    },{
+      "title":"PROJECT VOLO",
+      "info":"for Hush Studios.",
+      "description":"Augmented Reality Game & installation for Hush new years project."
+    },{
+      "title":"EMOTIVE CITY",
+      "info":"for Minimaforms.",
+      "description":"Internship assistant in the production of spherebots in Future Fest 2015 installation."
+    },{
+      "title":"ENCODED MATTER",
+      "info":" Workshop II during Master AADRL.",
+      "description":"Experimenting designs from processing agent behavior into a mill tool from CNC machine."
+    },{
+      "title":"MONEDA BICENTENARIO",
+      "info":"for Ministry of Public Buildings.",
+      "description":"Teodoro Fernandez Architects project under construction supervision from the Chilean government."
+    },{
+      "title":"PH HOUSE",
+      "info":"for Rafael Iglesia Studio.",
+      "description":"Private Housing building design in Rosario, Argentina."
+    },{
+      "title":"MILITARY NEIGHBORHOOD BUILDING",
+      "info":" for 4th year undergrad school.",
+      "description":"Housing project in Las Condes, Chile."
+    }
+
+  ]
+
+
+}

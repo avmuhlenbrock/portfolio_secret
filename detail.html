@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AvMS</title>
+    <link rel="stylesheet" href="avm.css">
+    <style>
+
+        body{
+
+            /*overflow: hidden;*/
+            padding: 0;
+            margin: 0;
+
+        }
+
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="load"> <img src="pics/load/0.gif" class="loadImg"></div>
+<div id="menu" class="black">
+
+    <div class="menu black" id="work">Work <div class="selectLine blackLine"></div></div>  /
+    <div class="menu black" id="about">About <div class="selectLine blackLine"></div></div>  /
+    <div class="menu black" id="contact">Résumé <div class="selectLine blackLine"></div></div>  /
+
+
+</div>
+
+<div class="detailContainer">
+
+    <div class="detailProject"></div>
+
+    <div class="detailImageContainer">
+
+        <video id="detailVideo" style="width: 100%; display: none;top: 0;" controls> <source src="" type="video/mp4"> </video>
+        <img class="detailImage" src="pics/detail/0/0.jpg">
+
+        <img src="pics/Cube.png" class="button left horizontalButton">
+        <img src="pics/Cube.png" class="button right horizontalButton">
+
+        <div class="yearContainer"><div class="yearText">20<div class="fixLine"></div></div><div id="year" class="yearText">17<div class="fixLine"></div></div></div>
+    </div>
+
+
+    <div class="detailTextContainer"></div>
+
+    <img src="pics/Cube.png" class="button left verticalButton" style="display: none">
+    <img src="pics/Cube.png" class="button right verticalButton" style="display: none">
+
+</div>
+
+<div class="scrollUpContainer">
+    <img class="scrollUpCube" src="pics/Cube.png"><br>up
+</div>
+
+<div class="end">
+    <br><br>
+    <h3 class="endP">detail</h3>
+    <h3 class="endP">av.muhlenbrock@gmail.com</h3>
+    <h3 class="endP">tel+6468303944</h3>
+
+</div>
+
+<script>
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+
+
+    var projectNum = getUrlParameter('projectNum') || 0;
+    var detailNum = getUrlParameter('detailNum') || 0;
+
+    var dataDetail;
+
+
+
+    var detailImage =  $(".detailImage");
+
+
+
+    $.get('pics/detail/detail.json',function (data) {
+
+        console.log(data);
+
+        dataDetail = data.detail;
+
+
+        getImage(0);
+
+        detailImage.one("load", function() {
+
+            console.log( detailImage.width(),detailImage.height());
+
+            verticleLayOut(detailImage.width()/detailImage.height() <= 1.05);
+
+            detailImage.animate({'opacity':1},500);
+
+        });
+
+
+        $('.detailProject').text(data.detail[projectNum]['Name']);
+        $('#year').text(data.detail[projectNum]['Year']);
+        $('#year').append('<div class="fixLine">');
+
+
+        appendDetail('About');
+        appendDetail('Location');
+
+
+        var text;
+
+        if(data.detail[projectNum]['Execution']){
+
+            $('.detailTextContainer').append(' <div class="detailTitle">Execution</div>');
+            $('.detailTextContainer').append('<div class="detailText" id="Execution"></div>');
+
+            text = '';
+            data.detail[projectNum]['Execution'].forEach(function (t) {
+
+                text+= t + "<br>"
+
+            });
+
+            $('#Execution').html(text);
+
+        }
+
+        if(data.detail[projectNum]['Programs Used']){
+
+            $('.detailTextContainer').append(' <div class="detailTitle">Programs Used</div>');
+            $('.detailTextContainer').append('<div class="detailText" id="ProgramsUsed"></div>');
+
+            text = '';
+            data.detail[projectNum]['Programs Used'].forEach(function (t) {
+
+                text+= t + "<br>"
+
+            });
+
+            $('#ProgramsUsed').html(text);
+
+        }
+
+
+
+        //appendDetail('Detail');
+        $('.detailTextContainer').append('<div id="additionalDescription" class="detailText">'+data.detail[projectNum]['Detail']+'</div>');
+        $('#additionalDescription').hide();
+
+        function appendDetail(key) {
+
+            if(data.detail[projectNum][key]){
+
+                $('.detailTextContainer').append(' <div class="detailTitle">'+key+'</div>');
+                $('.detailTextContainer').append('<div class="detailText">'+data.detail[projectNum][key]+'</div>');
+
+            }
+
+        }
+
+        adapt()
+
+
+    });
+
+    var rotate;
+
+//    $('.left').fadeOut();
+
+    $('.left').mouseenter(function () {
+
+        rotateAnime($(this),-90,0,200)
+
+    });
+
+    $('.left').mouseleave(function () {
+
+        rotateAnime($(this),0,-90,200)
+
+    });
+
+    $('.right').mouseenter(function () {
+
+        rotateAnime($(this),90,0,200)
+
+    });
+
+    $('.right').mouseleave(function () {
+
+        rotateAnime($(this),0,90,200)
+
+    });
+
+    $('.left').click(function () {
+
+        if(lock) {
+
+            console.log('locked');
+            return;
+
+        }
+
+        lock = true;
+
+        var detailImage = $(".detailImage");
+        detailImage.animate({'opacity':0},500,function () {
+
+            detailNum = (detailNum-1+dataDetail[projectNum]['Files'].length)%dataDetail[projectNum]['Files'].length;
+            getImage(detailNum);
+//            if(detailNum<=0) $('.left').fadeOut();
+//            if(detailNum<dataDetail[projectNum]['Files'].length-1) $('.right').fadeIn();
+            lock = false;
+
+        });
+
+
+        detailImage.one("load", function() {
+            detailImage.animate({'opacity':1},500);
+        });
+
+
+
+    });
+
+    var lock = false;
+
+
+    $('.right').click(function () {
+
+        if(lock) {
+
+            console.log('locked');
+            return;
+
+        }
+
+        lock = true;
+
+        var detailImage = $(".detailImage");
+        detailImage.animate({'opacity':0},500,function () {
+
+            detailNum = (detailNum+1+dataDetail[projectNum]['Files'].length)%dataDetail[projectNum]['Files'].length;
+            getImage(detailNum);
+//            if(detailNum>0) $('.left').fadeIn();
+//            if(detailNum>=dataDetail[projectNum]['Files'].length-1) $('.right').fadeOut();
+            lock = false;
+
+        });
+
+
+
+
+
+
+    });
+
+    function getImage(i) {
+        console.log(i);
+
+        var detailImage = $('.detailImage');
+
+        var filename = dataDetail[projectNum]['Files'][i];
+        if(filename.split('.').pop()==='mp4'){
+
+            console.log('load video',i);
+
+            $('.detailImage').hide();
+            $('#detailVideo').show();
+
+            var video = $('#detailVideo')[0];
+            video.src = "pics/detail/"+projectNum+"/"+filename;
+            video.load();
+            video.play();
+
+            setTimeout(verticleLayOut,100);
+
+
+        }else{
+
+            console.log('load image',i);
+            detailImage.attr("src","pics/detail/"+projectNum+"/"+filename);
+            $('#detailVideo').hide();
+            detailImage.show();
+
+            $('#detailVideo')[0].pause();
+
+
+
+            detailImage.one("load", function() {
+
+                console.log( detailImage.width(),detailImage.height());
+
+                verticleLayOut(detailImage.width()/detailImage.height() <= 1.05);
+
+                detailImage.animate({'opacity':1},500);
+
+            });
+
+        }
+
+
+
+        if(i>0 && dataDetail[projectNum]['Detail']){
+
+          $('.detailTextContainer').children().each(function () {
+
+              var detailToShow = (i-1)<=dataDetail[projectNum]['Detail'].length-1? i-1:dataDetail[projectNum]['Detail'].length-1;
+
+              $(this).hide();
+              $('#additionalDescription').text(dataDetail[projectNum]['Detail'][detailToShow]);
+              $('#additionalDescription').show();
+
+          });
+
+
+        }else{
+
+            $('.detailTextContainer').children().each(function () {
+
+                $(this).show();
+                $('#additionalDescription').hide();
+
+            });
+
+
+
+        }
+
+
+
+
+
+    }
+
+    function rotateAnime(obj,target,current,time) {
+
+        if(rotate)  clearInterval(rotate);
+        rotate = setInterval(function () {
+
+            obj.css({'transform' : 'rotate('+(current+= (target-current)/(time/20) )+'deg)'});
+
+            if(Math.abs(current - target)<=0.01) clearInterval(rotate);
+
+        },20)
+
+    }
+
+
+    function verticleLayOut(verticle) {
+
+//        if(verticle){
+//
+//            $('.detailImageContainer').css({'width':'50%','display':'inline-block'});
+//            $('.detailTextContainer').css({'width':'40%','display':'inline-block','left':'5%','margin-top':'1%'});
+//
+//            var yearWidth = $('.yearText').width();
+//            $('.yearContainer').css({'top':'100%','left':0,'right':'','width':yearWidth});
+//            $('.yearText').css({'text-align':'left'});
+//
+//            $('.verticalButton').show();
+//            $('.horizontalButton').hide();
+//
+//        }else{
+//
+//            $('.detailImageContainer').css({'width':'100%','display':''});
+//            $('.detailTextContainer').css({'width':'60%','display':'','left':'','margin-top':'12%'});
+//
+//            var yearWidth = $('.yearText').width();
+//            $('.yearContainer').css({'top':'','right':0,'left':'','width':yearWidth});
+//            $('.yearText').css({'text-align':'right'});
+//
+//            $('.verticalButton').hide();
+//            $('.horizontalButton').show();
+//
+//        }
+
+
+        if(verticle){
+
+
+            $('.detailImage').css({'margin-left':'20%','width':'60%'});
+            $('.detailTextContainer').css({'width':'40%','left':'20%'});
+            var yearWidth = $('.yearText').width();
+            $('.yearContainer').css({'right':'20%','width':yearWidth});
+
+        }else{
+
+            $('.detailImage').css({'margin-left':'0','width':'100%'});
+            $('.detailTextContainer').css({'width':'100%','left':'0'});
+            var yearWidth = $('.yearText').width();
+            $('.yearContainer').css({'right':'0','width':yearWidth});
+
+
+        }
+
+
+
+    }
+
+
+
+</script>
+<script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AvMS</title>
+    <link rel="stylesheet" href="avm.css">
+    <style>
+
+        /*body{*/
+
+            /*!*overflow: hidden;*!*/
+            /*padding: 0;*/
+            /*margin: 0;*/
+
+        /*}*/
+
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="load"> <img src="pics/load/0.gif" class="loadImg"></div>
+<div id="menu" class="black">
+
+    <div class="menu black" id="work">Work <div class="selectLine blackLine"></div></div>  /
+    <div class="menu black" id="about">About <div class="selectLine blackLine"></div></div>  /
+    <div class="menu black" id="contact">Résumé <div class="selectLine blackLine"></div></div>  /
+
+
+</div>
+
+<div class="titleContainer">
+
+    <div class="rotateContainer">
+        <img id="cube" class="titleCube" src="pics/Cube.png">
+        <div class="inline titleText">Astrid von Mühlenbrock<div class="selectLine blackLine"></div></div>
+    </div>
+</div>
+
+
+
+
+
+<div class="aboutContainer">
+
+    <div class="aboutVideoContainer">
+        <video id="aboutVideo2" width="100%" style="position: absolute;z-index: -100" loop>
+            <source src="pics/about2.mp4" type="video/mp4">
+        </video>
+        <video id="aboutVideo1" width="100%" onended="playNext()" style="z-index: 100">
+            <source src="pics/about1.mp4" type="video/mp4">
+        </video>
+
+        <!--<img src="pics/0.jpg" style="width: 100%">-->
+        <div class="yearContainer"><div class="yearText">20<div class="fixLine"></div></div><div id="year" class="yearText">17<div class="fixLine"></div></div></div>
+    </div>
+    <div class="aboutTextContainer"><img src="pics/about1.jpg" width="100%"></div>
+    <!--<div class="aboutTextContainer">-->
+
+        <!--<p> <a style="font-family: minoinPro;font-size: 20pt;font-style: italic;font-weight: bold;">About/</a> I’m a Chilean graduated architect [with honors] from-->
+            <!--Universidad del Desarrollo/ Santiago de Chile in year 2011-->
+            <!--and with a Masters from the Design Research Lab of the Architectural-->
+            <!--Association School in London 2014. During my university-->
+            <!--years I participated with Rafael Iglesia in his Design-->
+            <!--Research Studio in Rosario, Argentina.</p>-->
+        <!--<p>As professional experience I worked for the Chilean Ministry-->
+            <!--of Public Works, which involved to collaborate in the processes-->
+            <!--of public architecture competitions and in the development-->
+            <!--and construction process from national landmarks to new government-->
+            <!--projects.</p>-->
+        <!--<p>During my AADRL program, I valued the integration of discussions-->
+            <!--and project experimentations of architecture/robotics-->
+            <!--designs that encourage me to pursue an office-->
+            <!--that integrates architecture and technology and how they-->
+            <!--speculate the future spaces of society. During 2017, I have-->
+            <!--been working in Hush Studios, Brooklyn. A design company-->
+            <!--that integrates digital technology and architecture spaces for-->
+            <!--new audience experiences.</p>-->
+        <!--<p>The visuals of beauty, has always been my infinite journey of-->
+            <!--questions and failures.-->
+            <!--Experimenting is no less mysterious, it helps me find the poetry-->
+            <!--of things… where beauty may be found...</p>-->
+
+    <!--</div>-->
+
+
+
+
+
+</div>
+
+<div class="scrollUpContainer">
+    <img class="scrollUpCube gotoResume" src="pics/Cube.png"><br>cv
+</div>
+
+<div class="resume" style="background-color: #EBEBEB; padding: 5%">
+    <img src="pics/resume1.jpg" width="100%"><img src="pics/resume2.jpg" width="100%">
+
+</div>
+
+
+<div class="scrollUpContainer">
+    <img class="scrollUpCube" src="pics/Cube.png"><br>up
+</div>
+
+
+<script src="menu.js"></script>
+
+<script>
+
+    var aboutVideo1 = $("#aboutVideo1")[0];
+
+    setTimeout(function () {
+
+        aboutVideo1.play();
+
+
+    },2000);
+
+
+    function playNext() {
+
+        $("#aboutVideo1").animate({opacity:0},2000);
+        $("#aboutVideo2")[0].play();
+
+    }
+
+
+
+    $('.scrollUpContainer').css({'margin-top': '3%'});
+
+    var atResume = false;
+
+    var resume = $('.resume');
+
+    var scrolling = false;
+
+    window.onscroll = function () {
+
+        if(window.pageYOffset+window.innerHeight>=resume.position().top+100 && !atResume && !scrolling){
+
+
+            window.scrollTo(0,resume.position().top-window.innerHeight+100);
+//            scrolling = true;
+//            disableScroll();
+//            scrollUp(1000,resume.position().top-window.innerHeight+100,function () {
+//
+//                scrolling = false;
+//                enableScroll();
+//
+//            });
+
+        }
+
+
+    };
+
+
+    $('.scrollUpCube').off();
+    $('.scrollUpCube').click(function () {
+
+        console.log('top',window.pageYOffset);
+
+        spin(1000);
+        setTimeout(function () {
+            scrollUp(500,0,function () {
+
+                atResume = false;
+
+            });
+        },1000)
+
+    });
+
+
+    $('.gotoResume').off();
+    $('.gotoResume').click(function () {
+
+        atResume = true;
+
+        console.log('top',window.pageYOffset);
+
+        console.log(resume.position().top);
+
+        spin(1000);
+        setTimeout(function () {
+            scrollUp(500,resume.position().top);
+        },1000)
+
+    });
+
+
+
+
+    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove  = preventDefault; // mobile
+        document.onkeydown  = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
+
+
+
+</script>
+
+</body>
+</html>
