@@ -157,6 +157,15 @@
       "Year": "08",
       "Files":["0.jpg","1.jpg"]
 
+    },
+    {
+      "Name": "REAR WINDOW",
+      "About": "",
+      "Execution": ["Design Process","Visualization"],
+      "Programs Used": ["Rhino 3D Modelling","Vary","Photoshop CC"],
+      "Year": 17,
+      "Files":["0.jpg"]
+
     }
 
   ]
