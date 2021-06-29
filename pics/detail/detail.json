@@ -165,7 +165,14 @@
       "Programs Used": ["Rhino 3D Modelling","V-ray","Photoshop CC"],
       "Year": "20",
       "Files":["0.jpg"]
-
+    },
+    {
+      "Name": "SEA",
+      "About": "",
+      "Execution": ["Design Process","Visualization"],
+      "Programs Used": ["Rhino 3D Modelling","Enscape"],
+      "Year": "21",
+      "Files":["0.mp4"]
     }
 
   ]

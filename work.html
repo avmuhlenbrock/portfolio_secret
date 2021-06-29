@@ -86,6 +86,8 @@
 
         }
 
+        var i = 18
+        $('#rightRowContainer').append('<div id="project'+i+'" class="projectBlock"><div class="projectImg"></div><div class="projectTitle inline">'+works[i].title+'<div class="selectLine blackLine"></div></div><div class="projectInfo inline">'+works[i].info+'</div><br><div class="projectDes">'+works[i].description+'</div></div>')
 
         for(var i=9; i<=16; i++){
 
@@ -94,10 +96,10 @@
             projects[i] = $('#project'+i);
 
 
-
         }
 
         projects[17] = $('#project'+17);
+        projects[18] = $('#project'+18);
 
 
         projects.forEach(function (p,n) {
